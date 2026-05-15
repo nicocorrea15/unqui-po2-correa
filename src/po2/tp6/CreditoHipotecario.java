@@ -4,8 +4,9 @@ public class CreditoHipotecario extends Credito{
 	
 	private Propiedad propiedad;
 
-	public CreditoHipotecario(double monto, int cantCuotas, Cliente cliente) {
+	public CreditoHipotecario(double monto, int cantCuotas, Cliente cliente, Propiedad prop) {
 		super(monto, cantCuotas, cliente);
+		this.propiedad = prop;
 		// TODO Auto-generated constructor stub
 	}
 
@@ -14,8 +15,8 @@ public class CreditoHipotecario extends Credito{
 		
 		Cliente c = this.getCliente();
 	
-		return this.montoPorMes() < (c.getSueldo() * 0.5) 
-				&& this.getMonto() < (propiedad.getValorFiscal() * 0.7) 
+		return this.montoPorMes() <= (c.getSueldo() * 0.5) 
+				&& this.getMonto() <= (propiedad.getValorFiscal() * 0.7) 
 				&& c.getEdad() + (this.cantCuotas() / 12) <= 65;
 				 
 	}

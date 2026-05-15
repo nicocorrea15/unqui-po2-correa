@@ -6,6 +6,12 @@ public class Propiedad {
 	private String direccion;
 	private double valorFiscal;
 	
+	public Propiedad(String desc, String dir, double monto) {
+		this.descripcion = desc;
+		this.direccion = dir; 
+		this.valorFiscal = monto;
+	}
+	
 	public double getValorFiscal() {
 		return valorFiscal;
 	}

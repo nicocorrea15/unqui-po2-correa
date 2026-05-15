@@ -11,7 +11,7 @@ public class CreditoPersonal extends Credito{
 		
 		Cliente c = this.getCliente();
 	
-		return c.getMontoAnual() > 15000 && this.montoPorMes() < (c.getSueldo() * 0.7);
+		return c.getMontoAnual() >= 15000 && this.montoPorMes() <= (c.getSueldo() * 0.7);
 	}
 
 }
