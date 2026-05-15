@@ -11,4 +11,10 @@ public class ProductoCooperativo extends Producto{
 		 return super.getPrecio() * 0.9; 
 	}
 
+	@Override
+	public void registrarPago() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

@@ -1,6 +1,6 @@
 package po2.tp5;
 
-public abstract class Producto {
+public abstract class Producto implements Factura {
 	
 	private double precioBase ; 
 	private String nombre;
@@ -15,6 +15,12 @@ public abstract class Producto {
 	public double getPrecio() {
 		return precioBase;
 	}
+
+	@Override
+	public double montoAPagar() {
+		this.disminuirStock();
+		return this.getPrecio();
+	}
 	
 	public String getNombre() {
 		return nombre;
@@ -27,8 +33,4 @@ public abstract class Producto {
 	public void disminuirStock() { 
 		stock--;
 	}
-	
-	
-	
-
 }

@@ -1,6 +1,5 @@
 package po2.tp5;
 
-
 public class Caja {
 	
 	private double montoTotal = 0;
@@ -9,14 +8,19 @@ public class Caja {
 		
 	}
 	
-	public void registrarMontoProducto(Producto producto) {
-		montoTotal += producto.getPrecio(); 
-		producto.disminuirStock(); 
+	public void registrarMontoProducto(Factura factura) {
+		
+		montoTotal += factura.montoAPagar();
 	}
+	
+	public void cobrar(Factura factura) {
+
+        montoTotal += factura.montoAPagar();
+
+        factura.registrarPago();
+    }
 	
 	public double getMontoTotal() { 
 		return montoTotal;
 	}
-
-
 }
