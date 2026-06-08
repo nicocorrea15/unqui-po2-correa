@@ -14,7 +14,7 @@ public class Ingeniero extends PersonajeIndividual {
 		// printOut("Avanza un paso"); 
 		}
 	}
-			
+	
 	public void setLajas(int cant) {
 		this.lajas = cant;
 	}
