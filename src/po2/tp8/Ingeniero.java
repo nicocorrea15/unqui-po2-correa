@@ -11,7 +11,7 @@ public class Ingeniero extends PersonajeIndividual {
 	@Override
 	public void avanzar() {
 		if (this.hayCamino()) {
-		// printOut("Avanza un paso"); 
+		System.out.println("Avanza un paso hacia delante");
 		}
 	}
 	
